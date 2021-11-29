@@ -20,7 +20,7 @@ const About = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
                         <h2>Introduction</h2>
-                        <p className="lead">Perkenalkan nama saya Efraim Dahlan, saya mahasiswa dari Universitas Klabat Airmadidi. Ini halaman tentang saya dan detail tentang informasi mahasiswa saya akan tertera dibawah</p>
+                        <p className="lead">Perkenalkan nama saya Efraim Dahlan, saya mahasiswa dari Universitas Klabat Airmadidi. App yang saya buat adalah tentang aplikasi pencari Manga dari Website MAL menggunakan 2 jenis API yaitu dari Official MyAnimeList dan dari Jikan (Unofficial MyAnimeList API)</p>
                         <div className="container border border-2">
                         <p className="mb-0">Full Name                 : Dahlan, Efraim Ariel Riva</p>
                         <p className="mb-0">Registration Number/ NIM  : S21910044 / 105011910010</p>
