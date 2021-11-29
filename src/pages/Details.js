@@ -11,17 +11,9 @@ const Details = () => {
 
   useEffect(() => {
     
-    // hit TMDB Rest API endpoint to search for a movie
     fetch(`https://cors-anywhere.herokuapp.com/api.jikan.moe/v3/manga/${movieId}`)
     .then(response => response.json())
     .then(data => setMovie(data))
-    
-
-    // fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=13df8c0093657869b2d75e9a6b6fffd2&language=en-US`)
-    // .then(response => response.json())
-    // .then(data => setMovie(data));
-
-
 
     }, 
     // eslint-disable-next-line

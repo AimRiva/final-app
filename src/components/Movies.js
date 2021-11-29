@@ -6,7 +6,6 @@ const Movies = () => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    // hit TMDB Discover get movie endpoint to get the movies data
 
     var myHeaders = new Headers();
     myHeaders.append("X-MAL-CLIENT-ID", "f92a8d1d21d2961f22ba51f005dc77fd");
@@ -14,14 +13,10 @@ const Movies = () => {
     method: 'GET',
     headers: myHeaders
     };
-    // hit TMDB Rest API endpoint to search for a movie
+    
     fetch(`https://cors-anywhere.herokuapp.com/api.myanimelist.net/v2/manga/ranking?limit=20`, requestOptions)
     .then(response => response.json())
     .then(result => setMovies(result.data))
-
-    // fetch('https://api.themoviedb.org/3/discover/movie?api_key=13df8c0093657869b2d75e9a6b6fffd2&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate')
-    // .then(response => response.json())
-    // .then(data => setMovies(data.results));
 
     // eslint-disable-next-line
   }, []);
@@ -35,14 +30,10 @@ const Movies = () => {
     method: 'GET',
     headers: myHeaders
     };
-    // hit TMDB Rest API endpoint to search for a movie
+    
     fetch(`https://cors-anywhere.herokuapp.com/api.myanimelist.net/v2/manga?q=${text}&limit=20`, requestOptions)
     .then(response => response.json())
     .then(result => setMovies(result.data))
-    
-    // fetch(`https://api.themoviedb.org/3/search/movie?api_key=13df8c0093657869b2d75e9a6b6fffd2&language=en-US&query=${text}&page=1&include_adult=false`)
-    // .then(response => response.json())
-    // .then(data => setMovies(data.results));
 
     setText('');
   }
