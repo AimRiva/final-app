@@ -10,9 +10,14 @@ const Details = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    
+    var myHeaders = new Headers();
+    myHeaders.append("X-MAL-CLIENT-ID", "f92a8d1d21d2961f22ba51f005dc77fd");
+    var requestOptions = {
+    method: 'GET',
+    headers: myHeaders
+    };
     // hit TMDB Rest API endpoint to search for a movie
-    fetch(`https://cors-anywhere.herokuapp.com/api.jikan.moe/v3/manga/${movieId}`)
+    fetch(`https://cors-anywhere.herokuapp.com/api.myanimelist.net/v2/manga/${movieId}?fields=rank,mean,alternative_titles,synopsis,num_list_users,alternative_titles`, requestOptions)
     .then(response => response.json())
     .then(data => setMovie(data))
     
