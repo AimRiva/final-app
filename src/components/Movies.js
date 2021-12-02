@@ -43,7 +43,7 @@ const Movies = () => {
   return(
     <section className="py-5">
       <div className="container px-4 px-lg-5 mt-5">
-          <h2>Search Movie</h2>
+          <h2>Search Manga</h2>
           <form onSubmit={handleSubmit}>
             <input type="text" className="form-control" onChange={handleChange} value={text} />
           </form>
